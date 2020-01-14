@@ -19,7 +19,7 @@ Array solution 15863724 means:
 
 int A[SIZE] = {0,0,0,0,0,0,0,0};    //array solution
 int s=1;    //solutions
-int t=1;    //total interations
+int t=1;    //total tests
 
 int test(int queen,int col) {
 	t++;
@@ -44,5 +44,5 @@ void play(int queen) {
 
 void main(void) {
 	play(1);
-	printf("Total %d",t);
+	printf("Tests %d",t);
 }
