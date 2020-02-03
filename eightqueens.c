@@ -18,8 +18,8 @@ Array solution 15863724 means:
 #define SIZE 8
 
 int A[SIZE] = {0,0,0,0,0,0,0,0};    //array solution
-int s=1;    //solutions
-int t=1;    //total tests
+int s=0;    //solutions
+int t=0;    //total tests
 
 int test(int queen,int col) {
 	t++;
@@ -35,7 +35,7 @@ void play(int queen) {
 	for (int col=1;col<SIZE+1;col++) {
 		if (test(queen,col)) {
 			A[queen-1]=col;
-			if(queen==SIZE) printf("Solution: %d, %d, %d%d%d%d%d%d%d%d\n",s++,t,A[0],A[1],A[2],A[3],A[4],A[5],A[6],A[7]);
+			if(queen==SIZE) printf("Solution: %d, %d, %d%d%d%d%d%d%d%d\n",++s,t,A[0],A[1],A[2],A[3],A[4],A[5],A[6],A[7]);
 			else play(queen+1);
 			A[queen-1]=0;
 		}
